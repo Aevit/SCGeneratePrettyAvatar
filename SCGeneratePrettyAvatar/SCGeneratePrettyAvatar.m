@@ -13,8 +13,8 @@
 /**
  *  generate a pretty avatar image
  *
- *  if the first two character includes Chinese, the the text on the image is the first Chinese character,
- *  then the text on the image is the first two English character.
+ *  if the first two character includes Chinese, then the text on the image is the first Chinese character,
+ *  else the text on the image is the first two English character.
  *
  *  @param text   the text show on the image
  *  @param length the length of the image

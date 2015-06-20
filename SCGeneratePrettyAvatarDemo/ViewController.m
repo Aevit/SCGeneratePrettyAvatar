@@ -55,8 +55,12 @@
         [self.view addSubview:showImgView];
     }
     CGFloat imgViewLength = arc4random() % 151 + 50;
-    showImgView.frame = CGRectMake((CGRectGetWidth(self.view.frame) - imgViewLength) / 2, CGRectGetMinY(showImgView.frame), imgViewLength, imgViewLength);
     showImgView.layer.cornerRadius = imgViewLength / 2;
+    [UIView animateWithDuration:0.3f delay:0 usingSpringWithDamping:0.8f initialSpringVelocity:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+        showImgView.frame = CGRectMake((CGRectGetWidth(self.view.frame) - imgViewLength) / 2, CGRectGetMinY(showImgView.frame), imgViewLength, imgViewLength);
+    } completion:^(BOOL finished) {
+        ;
+    }];
     showImgView.image = [SCGeneratePrettyAvatar generateWithText:textField.text imageLength:1024];
 }
 
